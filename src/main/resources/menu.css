@@ -1,0 +1,24 @@
+@import 'fonts.css';
+
+.root{
+    -fx-font-family: Barlow, sans-serif;
+    -fx-base: #FAFAFA;
+    -fx-background: #b0bcd4;
+    -fx-accent: #235dbf;
+    -fx-focus-color: #235dbf;
+}
+
+.context-menu {
+    -fx-background-color: #FAFAFA;
+    -fx-padding: 0
+}
+
+.menu-bar {
+    -fx-font-family: Arimo, sans-serif;
+    -fx-font-weight: bold;
+}
+
+.menu-item {
+    -fx-font-weight: normal;
+}
+

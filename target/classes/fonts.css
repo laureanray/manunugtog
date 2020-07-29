@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/barlow/Barlow-Regular.ttf');
+}
+
+@font-face {
+    font-face-name: Arimo;
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/arimo/Arimo-Regular.ttf');
+}
+
+@font-face {
+    font-face-name: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/arimo/Arimo-Bold.ttf');
+}
+
