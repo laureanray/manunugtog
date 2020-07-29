@@ -2,6 +2,7 @@ package tech.laureanray;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import tech.laureanray.app.App;
 import tech.laureanray.scenes.MainScene;
 
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        stage.setTitle("Manunugtog");
+        stage.setTitle(App.NAME);
         stage.setScene(mainScene.getScene());
         stage.show();
     }
