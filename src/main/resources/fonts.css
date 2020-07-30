@@ -1,71 +1,35 @@
 @font-face {
     font-family: Barlow;
-    font-style: normal;
     font-weight: 400;
     src: url('fonts/barlow/Barlow-Regular.ttf');
 }
 
 @font-face {
     font-face-name: Arimo;
-    font-style: normal;
     font-weight: 400;
     src: url('fonts/arimo/Arimo-Regular.ttf');
 }
 
 @font-face {
     font-face-name: Arimo;
-    font-style: normal;
     font-weight: bold;
     src: url('fonts/arimo/Arimo-Bold.ttf');
 }
 
 
 @font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 300;
+    font-face-name: SFProLight;
     src: url('fonts/sf/SFProDisplay-Light.ttf');
 }
 
 @font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 400;
+    font-face-name: SFProRegular;
     src: url('fonts/sf/SFProDisplay-Regular.ttf');
 }
 
-
 @font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 500;
-    src: url('fonts/sf/SFProDisplay-Medium.ttf');
-}
-
-@font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 600;
-    src: url('fonts/sf/SFProDisplay-SemiBold.ttf');
-}
-
-@font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 700;
+    font-face-name: SFProBold;
     src: url('fonts/sf/SFProDisplay-Bold.ttf');
 }
 
-@font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 800;
-    src: url('fonts/sf/SFProDisplay-Heavy.ttf');
-}
 
-@font-face {
-    font-face-name: SFPro;
-    font-style: normal;
-    font-weight: 900;
-    src: url('fonts/sf/SFProDisplay-Black.ttf');
-}

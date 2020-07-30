@@ -1,12 +1,12 @@
 @import 'fonts.css';
 
 .root{
-    -fx-font-family: 'SF Pro Display', sans-serif;
+    -fx-font-family: SFPro, sans-serif;
     -fx-base: #FAFAFA;
     -fx-background: #b0bcd4;
     -fx-accent: #235dbf;
     -fx-focus-color: #235dbf;
-    -fx-font-weight: 400;
+    -fx-font-weight: normal;
 }
 
 .context-menu {
@@ -15,13 +15,12 @@
 }
 
 .menu-bar {
-    -fx-font-family: 'SF Pro Display', sans-serif;
-    -fx-font-weight: 400px!important;
-    -fx-font-size: 10pt;    
+    -fx-font-family: SFProBold, sans-serif;
+    -fx-font-size: 25pt;
 }
 
 .menu-item {
-    -fx-font-weight: 400;
+
 }
 
 #b1 {
