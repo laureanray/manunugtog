@@ -15,7 +15,6 @@ public class MainScene {
     private Scene scene;
     private MenuBar menuBar;
     private VBox vbox;
-    private HBox viewSwitcher;
     private HBox button1Hbox;
     private HBox button2Hbox;
     private BorderPane content;
@@ -34,10 +33,10 @@ public class MainScene {
         this.vbox = new VBox(menuBar);
         this.scene = new Scene(this.vbox, 400, 600);
         this.content = new BorderPane();
-        this.viewSwitcher = new HBox();
+        HBox viewSwitcher = new HBox();
         Button button1 = new Button("Button 1");
         Button button2 = new Button("Button 2");
-
+        button1.setId("b1");
         button1Hbox = new HBox(new Text("Button 1"));
         button2Hbox = new HBox(new Text("Button 2"));
 
@@ -49,8 +48,12 @@ public class MainScene {
             this.content.setCenter(button2Hbox);
         });
 
-        this.viewSwitcher.getChildren().add(button1);
-        this.viewSwitcher.getChildren().add(button2);
+        viewSwitcher.setFillHeight(true);
+        viewSwitcher.setId("view-switcher");
+        viewSwitcher.getChildren().add(button1);
+        viewSwitcher.getChildren().add(button2);
+
+
         this.vbox.getChildren().add(viewSwitcher);
 
         this.content.setCenter(button1Hbox);

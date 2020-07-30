@@ -19,3 +19,25 @@
     src: url('fonts/arimo/Arimo-Bold.ttf');
 }
 
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/sf/SFProDisplay-Regular.ttf');
+}
+
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/sf/SFProDisplay-Medium.ttf');
+}
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/sf/SFProDisplay-Bold.ttf');
+}

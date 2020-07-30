@@ -1,8 +1,8 @@
 tech/laureanray/app/AppBootstrapper.class
 tech/laureanray/app/AppState.class
-tech/laureanray/Main.class
 tech/laureanray/app/View.class
-tech/laureanray/app/AppData.class
-tech/laureanray/app/AppDataManager.class
 tech/laureanray/app/App.class
 tech/laureanray/scenes/MainScene.class
+tech/laureanray/Main.class
+tech/laureanray/app/AppData.class
+tech/laureanray/app/AppDataManager.class
