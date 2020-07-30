@@ -23,6 +23,13 @@
 @font-face {
     font-face-name: SFPro;
     font-style: normal;
+    font-weight: 300;
+    src: url('fonts/sf/SFProDisplay-Light.ttf');
+}
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
     font-weight: 400;
     src: url('fonts/sf/SFProDisplay-Regular.ttf');
 }
@@ -38,6 +45,27 @@
 @font-face {
     font-face-name: SFPro;
     font-style: normal;
+    font-weight: 600;
+    src: url('fonts/sf/SFProDisplay-SemiBold.ttf');
+}
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
     font-weight: 700;
     src: url('fonts/sf/SFProDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
+    font-weight: 800;
+    src: url('fonts/sf/SFProDisplay-Heavy.ttf');
+}
+
+@font-face {
+    font-face-name: SFPro;
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/sf/SFProDisplay-Black.ttf');
 }

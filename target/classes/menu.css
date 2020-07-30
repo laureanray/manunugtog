@@ -16,12 +16,12 @@
 
 .menu-bar {
     -fx-font-family: 'SF Pro Display', sans-serif;
-    -fx-font-weight: 700;
+    -fx-font-weight: 400px!important;
     -fx-font-size: 10pt;
 }
 
 .menu-item {
-    -fx-font-weight: 700;
+    -fx-font-weight: 400;
 }
 
 #b1 {

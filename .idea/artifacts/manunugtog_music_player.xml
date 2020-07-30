@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="manunugtog-music-player">
+    <output-path>$PROJECT_DIR$/out/artifacts/manunugtog_music_player</output-path>
+    <root id="root">
+      <element id="archive" name="manunugtog_music_player.jar">
+        <element id="module-output" name="manunugtog-music-player" />
+      </element>
+    </root>
+  </artifact>
+</component>
