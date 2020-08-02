@@ -11,6 +11,7 @@ public class MenuToolbar extends MenuBar {
     private MenuToolbar() {
         super();
         this.init();
+        this.setListeners();
     }
 
     private void init() {

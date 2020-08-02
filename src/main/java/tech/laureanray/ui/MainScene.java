@@ -29,7 +29,6 @@ public class MainScene extends Scene {
         if (MainScene.instance == null) {
             MainScene.instance = new MainScene();
             MainScene.instance.getStylesheets().add("menu.css");
-
         }
 
         return MainScene.instance;
