@@ -1,5 +1,5 @@
 # Manunugtog
-Manunugtog is a music built primarily for Linux. The name is a literal translation of *Music Player* in Filipino (tbh I was just lazy and can't think of a cool project name)
+Manunugtog is a music player built primarily for Linux. The name is a literal translation of *Music Player* in Filipino (tbh I was just lazy and can't think of a cool project name)
 
 #### Philosophy
 I use linux and can't find a graphical music player that is minimal, and looks consistent on all desktop environments and window managers. Aside from that, I just want to learn more GUI programming/desktop programming. Java and JavaFx seems like a good starting point for me (I've been eyeing Qt, Gtk3, and other toolkit as well). it will also help me understand and implement multithreading, performance optimizations and advance oop concepts.
