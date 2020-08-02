@@ -1,5 +1,6 @@
 tech/laureanray/app/AppBootstrapper.class
 tech/laureanray/app/AppState.class
+tech/laureanray/ui/strings/UIStrings.class
 tech/laureanray/app/View.class
 tech/laureanray/panes/LibraryPane.class
 tech/laureanray/ui/MenuToolbar.class

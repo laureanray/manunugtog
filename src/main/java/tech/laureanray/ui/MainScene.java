@@ -43,4 +43,8 @@ public class MainScene extends Scene {
     public static void setStage(Stage stage) {
         MainScene.stage = stage;
     }
+
+    public static Stage getStage() {
+        return MainScene.stage;
+    }
 }
