@@ -1,4 +1,5 @@
 package tech.laureanray.panes;
 
-public class LibraryView {
+public class LibraryPane {
+
 }
