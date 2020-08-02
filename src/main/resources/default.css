@@ -27,3 +27,10 @@
     -fx-background-color: red;
 }
 
+.button {
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 20pt;
+}
+
