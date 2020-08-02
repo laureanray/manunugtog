@@ -1,7 +1,7 @@
 package tech.laureanray.app;
 
 public class AppState {
-    private AppState state;
+    private static AppState state;
 
     private View currentView;
     private int currentWindowX;
@@ -15,9 +15,9 @@ public class AppState {
          */
     }
 
-    public AppState getState() {
+    public static AppState getState() {
         if (state == null) {
-            this.state = new AppState();
+            state = new AppState();
         }
         return state;
     }
