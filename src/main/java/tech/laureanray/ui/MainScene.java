@@ -5,6 +5,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import tech.laureanray.app.App;
 
 public class MainScene extends Scene {
@@ -13,6 +14,7 @@ public class MainScene extends Scene {
     private static VBox parent = new VBox();
     private static HBox viewSwitcher;
     private static BorderPane mainPane = new BorderPane();
+    private static Stage stage;
 
     private MainScene() {
         super(MainScene.parent, App.APP_WIDTH, App.APP_HEIGHT);
@@ -36,5 +38,9 @@ public class MainScene extends Scene {
 
     public static BorderPane getMainPane() {
         return mainPane;
+    }
+
+    public static void setStage(Stage stage) {
+        MainScene.stage = stage;
     }
 }
