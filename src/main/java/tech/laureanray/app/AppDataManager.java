@@ -4,7 +4,10 @@ public class AppDataManager {
     private static AppDataManager fileManager;
 
     private AppDataManager() {
-
+        /*
+            TODO:
+                1. Do all the initializations here
+         */
     }
 
     public static AppDataManager getFileManager() {

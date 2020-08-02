@@ -30,7 +30,7 @@ public class MainScene extends Scene {
     public static MainScene getInstance() {
         if (MainScene.instance == null) {
             MainScene.instance = new MainScene();
-            MainScene.instance.getStylesheets().add("menu.css");
+            MainScene.instance.getStylesheets().add("default.css");
         }
 
         return MainScene.instance;
