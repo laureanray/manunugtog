@@ -1,15 +1,15 @@
 package tech.laureanray.app;
 
 public class AppDataManager {
-    private AppDataManager fileManager;
+    private static AppDataManager fileManager;
 
     private AppDataManager() {
 
     }
 
-    public AppDataManager getFileManager() {
+    public static AppDataManager getFileManager() {
         if (fileManager == null) {
-            this.fileManager = new AppDataManager();
+            fileManager = new AppDataManager();
 
             /*
             TODO:

@@ -23,5 +23,10 @@ public class FileController {
     public void addFolder() {
         DirectoryChooser chooser = new DirectoryChooser();
         File path = chooser.showDialog(stage);
+        /*
+        TODO:
+            1. Save selected folder if new.
+            2. Trigger library refresh
+         */
     }
 }
