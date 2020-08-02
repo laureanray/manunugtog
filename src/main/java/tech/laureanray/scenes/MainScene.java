@@ -65,7 +65,6 @@ public class MainScene {
     private void initMenuBar() {
         this.menuBar = new MenuBar();
 
-//      FILE
         Menu fileMenu  = new Menu("File");
 
         MenuItem addFolder = new MenuItem("Add Folder");
@@ -75,7 +74,6 @@ public class MainScene {
         fileMenu.getItems().add(addFolder);
         fileMenu.getItems().add(exit);
 
-//      HELP
         Menu helpMenu = new Menu("Help");
 
         MenuItem about = new MenuItem("About");
