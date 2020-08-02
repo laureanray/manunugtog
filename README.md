@@ -23,4 +23,4 @@ Then use maven for running the application (will update soon)
 Stay tuned! Will upate tests soon. 
 
 ## Contributing
-*Soon*
+*Currently looking for contributors just dm me! @laureanray*
