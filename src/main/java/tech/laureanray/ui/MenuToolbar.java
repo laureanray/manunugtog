@@ -4,14 +4,12 @@ import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
-import javafx.stage.DirectoryChooser;
+import tech.laureanray.controller.FileController;
 import tech.laureanray.ui.strings.UIStrings;
-
-import java.io.File;
 
 public class MenuToolbar extends MenuBar {
     private static MenuToolbar instance;
-
+    private static final FileController fileController = FileController.getInstance();
     private MenuToolbar() {
         super();
         this.init();
@@ -52,9 +50,7 @@ public class MenuToolbar extends MenuBar {
                     switch (menuItem.getText()) {
                         case UIStrings.ADD_FOLDER:
                             menuItem.setOnAction(e -> {
-                                DirectoryChooser chooser = new DirectoryChooser();
-                                File selected = chooser.showDialog(MainScene.getStage());
-                                System.out.println(selected.getAbsolutePath());
+                                fileController.addFolder();
                             });
                             break;
                     }

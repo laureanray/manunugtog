@@ -1,6 +1,7 @@
 /home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/app/AppState.java
 /home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/panes/LibraryPane.java
 /home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/ui/MenuToolbar.java
+/home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/controller/FileController.java
 /home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/app/App.java
 /home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/ui/MainScene.java
 /home/lr/projects/manunugtog-music-player/src/main/java/tech/laureanray/ui/ViewSwitcher.java
