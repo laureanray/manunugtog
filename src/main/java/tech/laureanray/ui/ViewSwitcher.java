@@ -3,7 +3,7 @@ package tech.laureanray.ui;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import tech.laureanray.panes.LibraryPane;
+import tech.laureanray.panes.library.Library;
 
 public class ViewSwitcher extends HBox  {
     private static ViewSwitcher instance;
@@ -18,7 +18,7 @@ public class ViewSwitcher extends HBox  {
         Button albums = new Button("Albums");
         songs.setId("b1");
 
-        HBox libraryPane = LibraryPane.getInstance();
+        HBox libraryPane = Library.getInstance();
         HBox albumsView = new HBox(new Text("Albums"));
 
         songs.setOnMouseClicked(e -> {

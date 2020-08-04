@@ -1,12 +1,12 @@
-package tech.laureanray.panes;
+package tech.laureanray.panes.library;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
-public class LibraryPane extends HBox {
-    private static LibraryPane instance;
+public class Library extends HBox {
+    private static Library instance;
 
-    private LibraryPane() {
+    private Library() {
     }
 
     private static void initialize() {
@@ -14,9 +14,9 @@ public class LibraryPane extends HBox {
         instance.getChildren().add(text);
     }
 
-    public static LibraryPane getInstance() {
+    public static Library getInstance() {
         if (instance == null) {
-            instance = new LibraryPane();
+            instance = new Library();
             initialize();
         }
 
