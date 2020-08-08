@@ -1,9 +1,9 @@
 package tech.laureanray.panes.library;
 
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class Library extends HBox {
+public class Library extends VBox {
     private static Library instance;
 
     private Library() {
@@ -11,7 +11,9 @@ public class Library extends HBox {
 
     private static void initialize() {
         Text text = new Text("LibraryPane");
+        LibraryScroll scroll = LibraryScroll.getInstance();
         instance.getChildren().add(text);
+        instance.getChildren().add(scroll);
     }
 
     public static Library getInstance() {
