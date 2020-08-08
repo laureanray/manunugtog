@@ -1,7 +1,10 @@
 package tech.laureanray.app;
 
 public class ApplicationDataManager {
-    private static ApplicationDataManager fileManager;
+    private static ApplicationDataManager instance;
+
+    static {
+    }
 
     private ApplicationDataManager() {
         /*
@@ -10,9 +13,9 @@ public class ApplicationDataManager {
          */
     }
 
-    public static ApplicationDataManager getFileManager() {
-        if (fileManager == null) {
-            fileManager = new ApplicationDataManager();
+    public static ApplicationDataManager getInstance() {
+        if (instance == null) {
+            instance = new ApplicationDataManager();
 
             /*
             TODO:
@@ -20,10 +23,17 @@ public class ApplicationDataManager {
                 2. Load app data file
              */
 
-            System.getProperties().list(System.out);
 
         }
-        return fileManager;
+        return instance;
+    }
+
+    public static void loadData() {
+
+    }
+
+    public static void updateData() {
+
     }
 
 }
