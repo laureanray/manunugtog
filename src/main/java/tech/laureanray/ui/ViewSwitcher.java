@@ -11,7 +11,7 @@ public class ViewSwitcher extends HBox  {
 
     private ViewSwitcher() {
         super();
-        init();
+        this.init();
     }
 
     private void init() {

@@ -16,11 +16,20 @@
 
 .menu-bar {
     -fx-font-family: SFProBold, sans-serif;
-    -fx-font-size: 10pt;
+    /*-fx-padding: 0;*/
+    /*-fx-max-height: 35px;*/
+    /*-fx-pref-height: 35px;*/
+}
+
+.menu {
+    /*-fx-max-height: 35px;*/
+    /*-fx-pref-height: 35px;*/
+    /*-fx-font-size: 160px;*/
+    /*-fx-padding: 4px;*/
 }
 
 .menu-item {
-
+    /*-fx-padding: 0;*/
 }
 
 #view-switcher {
