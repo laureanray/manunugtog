@@ -6,7 +6,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import tech.laureanray.app.App;
+import tech.laureanray.app.ApplicationProperties;
 
 public class MainScene extends Scene {
     private static MainScene instance;
@@ -17,7 +17,7 @@ public class MainScene extends Scene {
     private static Stage stage;
 
     private MainScene() {
-        super(MainScene.parent, App.APP_WIDTH, App.APP_HEIGHT);
+        super(MainScene.parent, ApplicationProperties.APP_WIDTH, ApplicationProperties.APP_HEIGHT);
         init();
     }
 

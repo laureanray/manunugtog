@@ -1,24 +1,26 @@
 package tech.laureanray.app;
 
-public class AppDataManager {
-    private static AppDataManager fileManager;
+public class ApplicationDataManager {
+    private static ApplicationDataManager fileManager;
 
-    private AppDataManager() {
+    private ApplicationDataManager() {
         /*
             TODO:
                 1. Do all the initializations here
          */
     }
 
-    public static AppDataManager getFileManager() {
+    public static ApplicationDataManager getFileManager() {
         if (fileManager == null) {
-            fileManager = new AppDataManager();
+            fileManager = new ApplicationDataManager();
 
             /*
             TODO:
                 1. Create app data file if not exits
                 2. Load app data file
              */
+
+            System.getProperties().list(System.out);
 
         }
         return fileManager;

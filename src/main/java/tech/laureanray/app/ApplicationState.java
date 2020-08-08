@@ -1,13 +1,13 @@
 package tech.laureanray.app;
 
-public class AppState {
-    private static AppState state;
+public class ApplicationState {
+    private static ApplicationState state;
 
     private View currentView;
     private int currentWindowX;
     private int getCurrentWindowX;
 
-    private AppState () {
+    private ApplicationState() {
         /*
         TODO:
             1. Check if library is loaded here.
@@ -15,9 +15,9 @@ public class AppState {
          */
     }
 
-    public static AppState getState() {
+    public static ApplicationState getState() {
         if (state == null) {
-            state = new AppState();
+            state = new ApplicationState();
         }
         return state;
     }

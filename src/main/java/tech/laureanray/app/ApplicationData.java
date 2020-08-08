@@ -1,6 +1,6 @@
 package tech.laureanray.app;
 
-public class AppData {
+public class ApplicationData {
     private int windowX;
     private int windowY;
     private View view;
