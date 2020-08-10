@@ -8,10 +8,21 @@
 
 package tech.laureanray.test;
 
-import javax.print.attribute.standard.Media;
+import org.jflac.apps.Player;
+
+import javax.sound.sampled.LineUnavailableException;
+import java.io.IOException;
+
+//class SayHello extends TimerTask {
+//    public void run() {
+//        TestPlayer.player.
+//    }
+//}
 
 public class TestPlayer {
-    public static void main(String[] args) {
-
+    public static Player player = new Player();
+    public static void main(String[] args) throws IOException, LineUnavailableException {
+        Playah playah = new Playah();
+        playah.decode("music.flac");
     }
 }
