@@ -6,9 +6,7 @@
  * @since 8/8/20
  */
 
-package tech.laureanray.test;
-
-import org.jflac.apps.Player;
+package tech.laureanray.player;
 
 import javax.sound.sampled.LineUnavailableException;
 import java.io.IOException;
@@ -20,9 +18,9 @@ import java.io.IOException;
 //}
 
 public class TestPlayer {
-    public static Player player = new Player();
+    public static org.jflac.apps.Player player = new org.jflac.apps.Player();
     public static void main(String[] args) throws IOException, LineUnavailableException {
-        Playah playah = new Playah();
-        playah.decode("music.flac");
+        Player player = new Player();
+        player.decode("music.flac");
     }
 }

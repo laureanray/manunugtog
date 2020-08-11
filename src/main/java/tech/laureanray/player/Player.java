@@ -6,7 +6,7 @@
  * @since 8/8/20
  */
 
-package tech.laureanray.test;
+package tech.laureanray.player;
 
 import org.jflac.FLACDecoder;
 import org.jflac.PCMProcessor;
@@ -19,7 +19,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Vector;
 
-public class Playah implements PCMProcessor {
+public class Player implements PCMProcessor {
     private AudioFormat fmt;
     private DataLine.Info info;
     private SourceDataLine line;
