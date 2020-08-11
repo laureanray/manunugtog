@@ -49,12 +49,11 @@ public class Player implements PCMProcessor {
 
     public void decode(String inFileName) throws IOException, LineUnavailableException {
         FileInputStream is = new FileInputStream(inFileName);
-        FLACDecoder decoder = new FLACDecoder(is);
+        ExtendedDecoder decoder = new ExtendedDecoder(is);
         decoder.addPCMProcessor(this);
 
         try {
-            decoder.decode();
-            System.out.println(decoder.getSamplesDecoded());
+            decoder.play();
         } catch (EOFException var5) {
         }
 
