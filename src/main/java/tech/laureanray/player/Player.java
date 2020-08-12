@@ -8,7 +8,6 @@
 
 package tech.laureanray.player;
 
-import org.jflac.FLACDecoder;
 import org.jflac.PCMProcessor;
 import org.jflac.metadata.StreamInfo;
 import org.jflac.util.ByteData;
