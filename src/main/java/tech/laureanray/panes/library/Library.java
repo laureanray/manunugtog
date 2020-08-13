@@ -21,7 +21,6 @@ public class Library extends VBox {
         Text text = new Text("LibraryPane");
         ScrollPane sp = new ScrollPane();
         VBox vb = new VBox();
-
         this.getChildren().add(text);
         this.getChildren().add(sp);
         VBox.setVgrow(sp, Priority.ALWAYS);

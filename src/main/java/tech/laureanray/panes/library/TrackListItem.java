@@ -15,6 +15,7 @@ public class TrackListItem extends HBox {
     TrackListItem(String id, String title, String artist, String trackLength) {
         super();
         Text titleText = new Text(title);
+        titleText.prefWidth(250);
         Text artistText = new Text(artist);
         Text trackLengthText = new Text(trackLength);
         this.getChildren().addAll(titleText, artistText, trackLengthText);
@@ -22,5 +23,6 @@ public class TrackListItem extends HBox {
         this.setOnMouseClicked(evt -> {
             System.out.println("Clicked: " + this.getId());
         });
+        this.getStyleClass().add("tracklist-item");
     }
 }
