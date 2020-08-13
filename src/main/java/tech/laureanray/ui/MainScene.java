@@ -14,7 +14,6 @@ import tech.laureanray.utils.Keybindings;
 public class MainScene extends Scene {
     private static MainScene instance;
     private static MenuBar menuBar;
-    private static Keybindings keybindings;
     private static PlayerPane playerPane;
     private static TrackDetailsPane trackDetailsPane;
     private static VBox parent = new VBox();
