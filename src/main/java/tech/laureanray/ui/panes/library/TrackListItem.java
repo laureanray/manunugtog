@@ -6,7 +6,7 @@
  * @since 8/8/20
  */
 
-package tech.laureanray.panes.library;
+package tech.laureanray.ui.panes.library;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;

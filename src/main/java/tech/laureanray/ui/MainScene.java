@@ -7,12 +7,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationProperties;
+import tech.laureanray.ui.panes.PlayerPane;
 import tech.laureanray.utils.Keybindings;
 
 public class MainScene extends Scene {
     private static MainScene instance;
     private static MenuBar menuBar;
     private static Keybindings keybindings;
+    private static PlayerPane playerPane;
     private static VBox parent = new VBox();
     private static HBox viewSwitcher;
     private static BorderPane mainPane = new BorderPane();
@@ -25,7 +27,8 @@ public class MainScene extends Scene {
     private static void init() {
         MainScene.menuBar = MenuToolbar.getInstance();
         MainScene.viewSwitcher = ViewSwitcher.getInstance();
-        MainScene.parent.getChildren().addAll(menuBar, viewSwitcher, mainPane);
+        MainScene.playerPane = PlayerPane.getInstance();
+        MainScene.parent.getChildren().addAll(menuBar, playerPane, viewSwitcher, mainPane);
         MainScene.menuBar.setVisible(false);
     }
 

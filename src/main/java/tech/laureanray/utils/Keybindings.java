@@ -14,9 +14,8 @@ import tech.laureanray.ui.MenuToolbar;
 
 public class Keybindings {
     public static Keybindings instance;
-    private Scene scene;
+
     private Keybindings(Scene scene) {
-        this.scene = scene;
         scene.setOnKeyReleased(keyEvent -> {
             if (keyEvent.getCode().equals(KeyCode.ALT)) {
                 MenuToolbar toolbar = MenuToolbar.getInstance();

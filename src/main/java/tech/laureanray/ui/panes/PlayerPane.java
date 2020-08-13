@@ -1,21 +1,26 @@
-package tech.laureanray.panes;
+package tech.laureanray.ui.panes;
 
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
 public class PlayerPane extends HBox{
-    private PlayerPane instance;
+    private static PlayerPane instance;
 
     private PlayerPane() {
         super();
-
-        Button button = new Button("test");
-        this.instance.getChildren().add(button);
+        this.init();
+        this.setId("player");
     }
 
-    public PlayerPane getInstance() {
+    private void init() {
+        Button button = new Button("test");
+        this.getChildren().add(button);
+    }
+
+    public static PlayerPane getInstance() {
         if (instance == null) {
-            this.instance = new PlayerPane();
+            instance = new PlayerPane();
+
         }
         return instance;
     }
