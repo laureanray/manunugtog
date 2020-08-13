@@ -1,9 +1,9 @@
 package tech.laureanray.ui.panes;
 
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
-public class PlayerPane extends HBox{
+public class PlayerPane extends VBox {
     private static PlayerPane instance;
 
     private PlayerPane() {
