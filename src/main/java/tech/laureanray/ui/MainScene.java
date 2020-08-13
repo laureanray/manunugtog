@@ -7,15 +7,16 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationProperties;
+import tech.laureanray.utils.Keybindings;
 
 public class MainScene extends Scene {
     private static MainScene instance;
     private static MenuBar menuBar;
+    private static Keybindings keybindings;
     private static VBox parent = new VBox();
     private static HBox viewSwitcher;
     private static BorderPane mainPane = new BorderPane();
     private static Stage stage;
-
     private MainScene() {
         super(MainScene.parent, ApplicationProperties.APP_WIDTH, ApplicationProperties.APP_HEIGHT);
         init();
@@ -25,7 +26,6 @@ public class MainScene extends Scene {
         MainScene.menuBar = MenuToolbar.getInstance();
         MainScene.viewSwitcher = ViewSwitcher.getInstance();
         MainScene.parent.getChildren().addAll(menuBar, viewSwitcher, mainPane);
-
         MainScene.menuBar.setVisible(false);
     }
 

@@ -6,6 +6,7 @@ import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.app.ApplicationProperties;
 import tech.laureanray.app.ApplicationDataManager;
 import tech.laureanray.ui.MainScene;
+import tech.laureanray.utils.Keybindings;
 
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ public class Main extends Application {
         stage.setScene(mainScene);
         stage.show();
         mainScene.setStage(stage);
-
+        Keybindings.initialize(mainScene);
         stage.setOnCloseRequest(windowEvent -> {
             ApplicationConfigManager.updateConfiguration();
         });
