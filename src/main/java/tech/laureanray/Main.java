@@ -17,6 +17,7 @@ public class Main extends Application {
     private final MainScene mainScene = MainScene.getInstance();
     private final SettingsScene settingsScene = SettingsScene.getInstance();
     private final ApplicationDataManager appDataManager = ApplicationDataManager.getInstance();
+    private final ApplicationConfigManager configManager = ApplicationConfigManager.getInstance();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -32,7 +33,7 @@ public class Main extends Application {
         settingsStage.show();
 
         stage.setOnCloseRequest(windowEvent -> {
-            ApplicationConfigManager.updateConfiguration();
+            configManager.updateConfiguration();
         });
         Platform.runLater( () -> stage.requestFocus() );
     }
