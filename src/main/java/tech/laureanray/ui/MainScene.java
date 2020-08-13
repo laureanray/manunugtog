@@ -25,6 +25,8 @@ public class MainScene extends Scene {
         MainScene.menuBar = MenuToolbar.getInstance();
         MainScene.viewSwitcher = ViewSwitcher.getInstance();
         MainScene.parent.getChildren().addAll(menuBar, viewSwitcher, mainPane);
+
+        MainScene.menuBar.setVisible(false);
     }
 
     public static MainScene getInstance() {

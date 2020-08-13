@@ -40,6 +40,7 @@ public class MenuToolbar extends MenuBar {
         this.getMenus().add(fileMenu);
         this.getMenus().add(helpMenu);
         this.getMenus().add(viewMenu);
+        this.managedProperty().bind(this.visibleProperty());
     }
 
     private void setListeners() {
@@ -70,6 +71,8 @@ public class MenuToolbar extends MenuBar {
             }
         });
     }
+
+
 
     public static MenuToolbar getInstance() {
         if (MenuToolbar.instance == null) {
