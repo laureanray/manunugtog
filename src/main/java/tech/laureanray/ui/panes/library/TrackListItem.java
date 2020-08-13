@@ -10,13 +10,14 @@ package tech.laureanray.ui.panes.library;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import tech.laureanray.app.ApplicationProperties;
 
 public class TrackListItem extends HBox {
     TrackListItem(String id, String title, String artist, String trackLength) {
         super();
         Text titleText = new Text(title);
-        titleText.prefWidth(250);
         Text artistText = new Text(artist);
+        this.setPrefWidth(ApplicationProperties.APP_WIDTH - 30);
         Text trackLengthText = new Text(trackLength);
         this.getChildren().addAll(titleText, artistText, trackLengthText);
         this.setId(id);

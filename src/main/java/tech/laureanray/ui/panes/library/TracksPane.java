@@ -9,12 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Library extends VBox {
-    private static Library instance;
+public class TracksPane extends VBox {
+    private static TracksPane instance;
 
-    private Library() {
+    private TracksPane() {
         super();
         this.initialize();
+        this.setId("tracks-pane");
     }
 
     private void initialize() {
@@ -23,10 +24,11 @@ public class Library extends VBox {
         VBox vb = new VBox();
         this.getChildren().add(text);
         this.getChildren().add(sp);
+        vb.setPrefHeight(500); // FIXME: set fixed height
         VBox.setVgrow(sp, Priority.ALWAYS);
 
         List<TrackListItem> listItems = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 5; i++) {
             TrackListItem item = new TrackListItem(String.valueOf(i),"Title", "Artist", "3:12");
             listItems.add(item);
             vb.getChildren().add(item);
@@ -36,9 +38,9 @@ public class Library extends VBox {
         sp.setContent(vb);
     }
 
-    public static Library getInstance() {
+    public static TracksPane getInstance() {
         if (instance == null) {
-            instance = new Library();
+            instance = new TracksPane();
         }
 
         return instance;

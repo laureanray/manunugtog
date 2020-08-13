@@ -11,7 +11,7 @@ public class LibraryScroll extends ScrollPane {
         super();
         VBox box = new VBox();
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 5; i++) {
             box.getChildren().add(new Button("Button Test "));
         }
 

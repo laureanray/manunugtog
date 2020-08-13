@@ -34,6 +34,11 @@
 
 #view-switcher {
     -fx-background-color: #FAFAFA;
+    -fx-padding: 15px;
+}
+
+#albums-pane {
+    -fx-padding: 15px
 }
 
 .button{
@@ -47,9 +52,21 @@
 }
 
 
-.tracklist-item, #player {v
+.tracklist-item, #player {
     -fx-font-family: SFPro, sans-serif;
-    -fx-padding: 15px;
+    -fx-padding: 5px 15px;
+}
+
+.tracklist-item {
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1;
+    -fx-border-color: #888;
+    -fx-cursor: hand;
+    -fx-border-insets: 2
+}
+
+.tracklist-item:hover {
+    -fx-background-color: #e7e7e7;
 }
 
 fieldset {
@@ -58,6 +75,10 @@ fieldset {
 
 .tracklists:focused {
     -fx-box-border: transparent;
+    -fx-border-width: 0;
+}
+
+.scroll-pane {
     -fx-border-width: 0;
 }
 
@@ -72,7 +93,7 @@ fieldset {
 .slider:focused .thumb {
     -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
     -fx-background-insets: 0 0 -1 0, 0, 1, 2;
-    -fx-background-radius: 3px, 3px, 2px, 1px;
+    /*-fx-background-radius: 3px, 3px, 2px, 1px;*/
 }
 
 .scroll-pane:focused,
