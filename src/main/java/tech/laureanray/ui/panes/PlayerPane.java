@@ -3,19 +3,19 @@ package tech.laureanray.panes;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
-public class NowPlayingPane extends HBox{
-    private NowPlayingPane instance;
+public class PlayerPane extends HBox{
+    private PlayerPane instance;
 
-    private NowPlayingPane() {
+    private PlayerPane() {
         super();
 
         Button button = new Button("test");
         this.instance.getChildren().add(button);
     }
 
-    public NowPlayingPane getInstance() {
+    public PlayerPane getInstance() {
         if (instance == null) {
-            this.instance = new NowPlayingPane();
+            this.instance = new PlayerPane();
         }
         return instance;
     }
