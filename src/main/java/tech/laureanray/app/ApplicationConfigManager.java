@@ -11,6 +11,7 @@ package tech.laureanray.app;
 
 import com.alibaba.fastjson.JSON;
 import tech.laureanray.models.Configuration;
+import tech.laureanray.ui.strings.FILE;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -25,7 +26,7 @@ public class ApplicationConfigManager {
         Configuration defaultConfiguration = new Configuration();
         String jsonString = JSON.toJSONString(defaultConfiguration);
 
-        File configFile = new File("application-config.json");
+        File configFile = new File(FILE.APP_CONFIG);
         if (configFile.exists()) {
             System.out.println("FILE EXISTS");
             System.out.println(configFile.toString());
@@ -38,7 +39,7 @@ public class ApplicationConfigManager {
             }
         } else {
             try {
-                FileWriter myWriter = new FileWriter("application-config.json");
+                FileWriter myWriter = new FileWriter(FILE.APP_CONFIG);
                 myWriter.write(jsonString);
                 myWriter.close();
                 System.out.println("Successfully wrote to the file.");
@@ -59,7 +60,7 @@ public class ApplicationConfigManager {
 
     public void updateConfiguration() {
         try {
-            FileWriter myWriter = new FileWriter("application-config.json");
+            FileWriter myWriter = new FileWriter(FILE.APP_CONFIG);
             myWriter.write(JSON.toJSONString(loadedConfiguration));
             myWriter.close();
         } catch (IOException e) {
