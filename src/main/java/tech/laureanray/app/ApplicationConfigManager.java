@@ -42,6 +42,7 @@ public class ApplicationConfigManager {
                 FileWriter myWriter = new FileWriter(FILE.APP_CONFIG);
                 myWriter.write(jsonString);
                 myWriter.close();
+                this.loadedConfiguration = defaultConfiguration;
                 System.out.println("Successfully wrote to the file.");
             } catch (IOException e) {
                 System.out.println("An error occurred.");
@@ -56,6 +57,14 @@ public class ApplicationConfigManager {
         }
 
         return instance;
+    }
+
+    // This loads the configuration and sets the application state
+    public void loadConfiguration() {
+        System.out.println("loadConfiguration()");
+        if (this.loadedConfiguration != null) {
+            ApplicationState.getState().setWindowPosition(this.loadedConfiguration.getPositionX(), this.loadedConfiguration.getPositionY());
+        }
     }
 
     public void updateConfiguration() {

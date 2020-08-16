@@ -8,23 +8,26 @@
 
 package tech.laureanray.ui;
 
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import tech.laureanray.app.ApplicationState;
 import tech.laureanray.ui.strings.UI;
 
 public class WindowManager {
     private static WindowManager instance;
-    private Stage stage;
+    private Stage settingsStage;
+    private ApplicationState state = ApplicationState.getState();
     private WindowManager() {
+        this.settingsStage = new Stage();
+        state.setSettingsStage(this.settingsStage);
     }
 
-    private void setStage(Stage stage) {
-        this.stage = stage;
-    }
 
 
     public static WindowManager getInstance() {
         if (instance == null) {
             instance = new WindowManager();
+
         }
 
         return instance;
@@ -33,11 +36,11 @@ public class WindowManager {
 
     public void showSettings() {
         SettingsScene settingsScene = SettingsScene.getInstance();
-        Stage settingsStage = new Stage();
         settingsStage.setTitle(UI.SETTINGS);
         settingsStage.setScene(settingsScene);
+        settingsStage.initModality(Modality.APPLICATION_MODAL);
         settingsStage.showAndWait();
     }
 
-        }
+}
 

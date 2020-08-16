@@ -1,18 +1,17 @@
 package tech.laureanray.app;
 
+import javafx.stage.Stage;
+
 public class ApplicationState {
     private static ApplicationState state;
 
     private View currentView;
     private int currentWindowX;
     private int getCurrentWindowX;
+    private Stage mainStage;
+    private Stage settingsStage;
 
     private ApplicationState() {
-        /*
-        TODO:
-            1. Check if library is loaded here.
-
-         */
     }
 
     public static ApplicationState getState() {
@@ -20,6 +19,14 @@ public class ApplicationState {
             state = new ApplicationState();
         }
         return state;
+    }
+
+    public void setMainStage(Stage stage) {
+        this.mainStage = stage;
+    }
+
+    public void setSettingsStage(Stage stage) {
+        this.settingsStage = stage;
     }
 
     public View getCurrentView() {
@@ -44,5 +51,12 @@ public class ApplicationState {
 
     public void setGetCurrentWindowX(int getCurrentWindowX) {
         this.getCurrentWindowX = getCurrentWindowX;
+    }
+
+    public void setWindowPosition(int x, int y) {
+        if (this.mainStage != null) {
+            this.mainStage.setX(x);
+            this.mainStage.setY(y);
+        }
     }
 }

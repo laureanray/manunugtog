@@ -13,7 +13,8 @@ import java.util.List;
 
 public class TracksPane extends VBox {
     private static TracksPane instance;
-
+    private ScrollPane scrollPane = new ScrollPane();
+    private VBox vb = new VBox();
     private TracksPane() {
         super();
         this.initialize();
@@ -22,15 +23,18 @@ public class TracksPane extends VBox {
 
     private void initialize() {
         Text text = new Text("LibraryPane");
-        ScrollPane sp = new ScrollPane();
-        VBox vb = new VBox();
         this.getChildren().add(text);
-        this.getChildren().add(sp);
+        this.getChildren().add(scrollPane);
+
+        this.updateTrackList();
+    }
+
+    public void updateTrackList() {
+        System.out.println((char)27 + "[31m" + "updateTrackList()");
         vb.setPrefHeight(500); // FIXME: set fixed height
-        VBox.setVgrow(sp, Priority.ALWAYS);
-
+        vb.getChildren().removeAll(); // Remove all
         List<TrackListItem> listItems = new ArrayList<>();
-
+        VBox.setVgrow(scrollPane, Priority.ALWAYS);
         List<Track> tracks = ApplicationDataManager.getInstance().getTracks();
 
         for (Track track: tracks) {
@@ -39,8 +43,7 @@ public class TracksPane extends VBox {
             vb.getChildren().add(item);
         }
 
-
-        sp.setContent(vb);
+        scrollPane.setContent(vb);
     }
 
     public static TracksPane getInstance() {

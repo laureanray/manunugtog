@@ -13,6 +13,7 @@ import tech.laureanray.app.ApplicationDataManager;
 import tech.laureanray.models.ApplicationData;
 import tech.laureanray.models.Configuration;
 import tech.laureanray.models.Track;
+import tech.laureanray.ui.panes.library.TracksPane;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -43,6 +44,7 @@ public class LoadMusicThread implements Runnable {
                             var t = new Track(e.toString(), null, null);
                             this.applicationDataManager.addTrack(t);
                         });
+                TracksPane.getInstance().updateTrackList();
             } catch (IOException e) {
                 e.printStackTrace();
             }
