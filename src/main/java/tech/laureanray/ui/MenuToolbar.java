@@ -13,6 +13,7 @@ public class MenuToolbar extends MenuBar {
     private MenuToolbar() {
         super();
         this.init();
+        this.setListeners();
     }
 
     private void init() {
@@ -50,6 +51,7 @@ public class MenuToolbar extends MenuBar {
                     switch (menuItem.getText()) {
                         case UI.ADD_FOLDER:
                             menuItem.setOnAction(e -> {
+                                System.out.println("ADD FOLDER");
                                 fileController.addFolder();
                             });
                             break;

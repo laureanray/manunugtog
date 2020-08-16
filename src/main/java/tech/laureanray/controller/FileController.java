@@ -2,14 +2,26 @@ package tech.laureanray.controller;
 
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import tech.laureanray.app.ApplicationConfigManager;
+import tech.laureanray.models.Configuration;
+import tech.laureanray.threads.LoadMusicThread;
 import tech.laureanray.ui.MainScene;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class FileController {
     private static FileController instance;
     private static Stage stage;
-    private FileController() { }
+    private ApplicationConfigManager configManager;
+    private Configuration config;
+    private FileController() {
+        this.configManager = ApplicationConfigManager.getInstance();
+        this.config = this.configManager.getConfiguration();
+
+    }
 
     public static FileController getInstance() {
         if (instance == null) {
@@ -21,12 +33,27 @@ public class FileController {
     }
 
     public void addFolder() {
+        // TODO: prevent duplicate folders, prevent nested folders with already included parent from adding
         DirectoryChooser chooser = new DirectoryChooser();
         File path = chooser.showDialog(stage);
-        /*
-        TODO:
-            1. Save selected folder if new.
-            2. Trigger library refresh
-         */
+
+        if (!this.config.getTargetDirectories().contains(path.toString())) {
+            // FIXME: prevent nested
+            this.config.getTargetDirectories().add(path.toString());
+
+            LoadMusicThread loadMusicThread = new LoadMusicThread();
+            loadMusicThread.start();
+        }
+
+        configManager.updateConfiguration();
     }
+
+    public void updateLibrary() throws IOException {
+        for (String path: this.config.getTargetDirectories()) {
+            Files.walk(Paths.get(path))
+                    .filter(Files::isRegularFile)
+                    .forEach(System.out::println);
+        }
+    }
+
 }

@@ -31,7 +31,7 @@ public class ApplicationConfigManager {
             System.out.println(configFile.toString());
                 if (configFile.canRead()) { try {
                     String content = Files.readString(configFile.getAbsoluteFile().toPath(), StandardCharsets.UTF_8);
-                    Configuration config = JSON.parseObject(content, Configuration.class);
+                    loadedConfiguration = JSON.parseObject(content, Configuration.class);
                 } catch (IOException e) {
                     // handle error here
 
@@ -47,7 +47,6 @@ public class ApplicationConfigManager {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
-
         }
     }
 
@@ -67,7 +66,18 @@ public class ApplicationConfigManager {
 
          */
     };
-    public void updateConfiguration() {
 
+    public void updateConfiguration() {
+        try {
+            FileWriter myWriter = new FileWriter("application-config.json");
+            myWriter.write(JSON.toJSONString(loadedConfiguration));
+            myWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     };
+
+    public Configuration getConfiguration() {
+        return this.loadedConfiguration;
+    }
 }
