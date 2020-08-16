@@ -28,6 +28,11 @@
 }
 
 @font-face {
+    -fx-font-family: SFProMedium;
+    src: url('fonts/sf/SFProDisplay-Medium.ttf');
+}
+
+@font-face {
     font-face-name: SFProBold;
     src: url('fonts/sf/SFProDisplay-Bold.ttf');
 }

@@ -31,7 +31,7 @@ public class TracksPane extends VBox {
 
     public void updateTrackList() {
         System.out.println((char)27 + "[31m" + "updateTrackList()");
-        vb.setPrefHeight(500); // FIXME: set fixed height
+//        vb.setPrefHeight(500); // FIXME: set fixed height
         vb.getChildren().removeAll(); // Remove all
         List<TrackListItem> listItems = new ArrayList<>();
         VBox.setVgrow(scrollPane, Priority.ALWAYS);

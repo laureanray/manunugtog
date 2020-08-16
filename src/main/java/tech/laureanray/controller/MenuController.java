@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.models.Configuration;
 import tech.laureanray.threads.LoadMusicThread;
+import tech.laureanray.ui.WindowManager;
 import tech.laureanray.ui.scenes.MainScene;
 import tech.laureanray.ui.elements.library.TracksPane;
 
@@ -57,5 +58,9 @@ public class MenuController {
     public void refreshLibrary() {
         System.out.println("refreshLibrary()");
         TracksPane.getInstance().updateTrackList();
+    }
+
+    public void showSettings() {
+        WindowManager.getInstance().showSettings();
     }
 }

@@ -26,6 +26,8 @@ public class MenuToolbar extends MenuBar {
             addFolder.setOnAction(e -> menuController.addFolder());
         var exit = new MenuItem(UI.EXIT);
             exit.setOnAction(e -> menuController.exit());
+        var settings = new MenuItem(UI.PREFERENCES);
+            settings.setOnAction(e -> menuController.showSettings());
         var about = new MenuItem(UI.ABOUT);
         var refresh = new MenuItem(UI.REFRESH_LIBRARY);
             refresh.setOnAction(e -> menuController.refreshLibrary());
@@ -34,7 +36,7 @@ public class MenuToolbar extends MenuBar {
 
         windowsSubMenu.getItems().addAll(nowPlaying);
 
-        fileMenu.getItems().addAll(addFolder, exit);
+        fileMenu.getItems().addAll(addFolder, settings, exit);
         libraryMenu.getItems().add(refresh);
         helpMenu.getItems().add(about);
         viewMenu.getItems().add(windowsSubMenu);

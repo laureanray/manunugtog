@@ -9,6 +9,7 @@
 package tech.laureanray.ui.scenes;
 
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
@@ -26,18 +27,48 @@ public class SettingsScene extends Scene {
     }
 
     private void init() {
-        Text text = new Text("Settings");
-        TabPane tabPane = new TabPane();
-        Tab generalSettings = new Tab("General");
-        tabPane.getTabs().add(generalSettings);
+        var tabPane = new TabPane();
+            tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
+
+        var librarySettings = new Tab("Library");
+
+        var librarySettingsContent = new VBox();
+            librarySettingsContent.getStyleClass().add("preferences-content");
+
+        var libraryHeaderText = new Text("Music Directory");
+            libraryHeaderText.getStyleClass().add("preferences-header");
+
+        var libraryListview = new ListView<String>();
+            libraryListview.getItems().add("Test item");
 
 
-        parent.getChildren().addAll(text, tabPane);
+            librarySettingsContent.getChildren().addAll(
+                    libraryHeaderText,
+                    libraryListview
+            );
+
+            librarySettings.setContent(librarySettingsContent);
+
+
+
+        var playerSettings = new Tab("Player");
+        var lookSettings = new Tab("Look & Feel");
+
+
+        tabPane.getTabs().addAll(
+                librarySettings,
+                playerSettings,
+                lookSettings
+        );
+
+
+        parent.getChildren().addAll(tabPane);
     }
 
     public static SettingsScene getInstance() {
         if (instance == null) {
             instance = new SettingsScene();
+            instance.getStylesheets().add("default.css");
         }
 
         return instance;

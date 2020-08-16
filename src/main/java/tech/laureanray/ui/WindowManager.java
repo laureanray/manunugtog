@@ -37,7 +37,7 @@ public class WindowManager {
 
     public void showSettings() {
         SettingsScene settingsScene = SettingsScene.getInstance();
-        settingsStage.setTitle(UI.SETTINGS);
+        settingsStage.setTitle(UI.PREFERENCES);
         settingsStage.setScene(settingsScene);
         settingsStage.initModality(Modality.APPLICATION_MODAL);
         settingsStage.showAndWait();
