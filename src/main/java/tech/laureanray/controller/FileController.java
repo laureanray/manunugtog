@@ -45,8 +45,7 @@ public class FileController {
 
     public void loadMusic()  {
         LoadMusicThread loadMusicThread = new LoadMusicThread();
-        loadMusicThread.start();
-
+        loadMusicThread.run();
     }
 
 }

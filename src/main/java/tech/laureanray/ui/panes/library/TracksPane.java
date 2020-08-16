@@ -4,6 +4,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import tech.laureanray.app.ApplicationDataManager;
+import tech.laureanray.models.Track;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,8 +30,11 @@ public class TracksPane extends VBox {
         VBox.setVgrow(sp, Priority.ALWAYS);
 
         List<TrackListItem> listItems = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            TrackListItem item = new TrackListItem(String.valueOf(i),"Title", "Artist", "3:12");
+
+        List<Track> tracks = ApplicationDataManager.getInstance().getTracks();
+
+        for (Track track: tracks) {
+            TrackListItem item = new TrackListItem(track.hashCode(), track.getTitle(), "Artist", "3:12");
             listItems.add(item);
             vb.getChildren().add(item);
         }

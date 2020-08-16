@@ -1,16 +1,16 @@
 package tech.laureanray.app;
 
+import tech.laureanray.models.Track;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ApplicationDataManager {
     private static ApplicationDataManager instance;
-
-    static {
-    }
+    private List<Track> trackList;
 
     private ApplicationDataManager() {
-        /*
-            TODO:
-                1. Do all the initializations here
-         */
+        this.trackList = new ArrayList<>();
     }
 
     public static ApplicationDataManager getInstance() {
@@ -36,4 +36,13 @@ public class ApplicationDataManager {
 
     }
 
+    public void addTrack(Track track) {
+        this.trackList.add(track);
+        System.out.println("ADDED: " + track.getTitle());
+    }
+
+
+    public List<Track> getTracks() {
+        return new ArrayList<Track>(this.trackList);
+    }
 }

@@ -9,18 +9,24 @@
 package tech.laureanray.threads;
 
 import tech.laureanray.app.ApplicationConfigManager;
+import tech.laureanray.app.ApplicationDataManager;
+import tech.laureanray.models.ApplicationData;
 import tech.laureanray.models.Configuration;
+import tech.laureanray.models.Track;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class LoadMusicThread  extends Thread {
+public class LoadMusicThread implements Runnable {
     private Configuration config;
+    private ApplicationDataManager applicationDataManager;
+    private ApplicationData applicationData;
     public LoadMusicThread() {
         System.out.println("LoadMusicThread construct");
         this.config = ApplicationConfigManager.getInstance().getConfiguration();
+        this.applicationDataManager = ApplicationDataManager.getInstance();
     }
 
     @Override
@@ -33,10 +39,15 @@ public class LoadMusicThread  extends Thread {
             try {
                 Files.walk(Paths.get(directory))
                         .filter(Files::isRegularFile)
-                        .forEach(System.out::println);
+                        .forEach(e -> {
+                            var t = new Track(e.toString(), null, null);
+                            this.applicationDataManager.addTrack(t);
+                        });
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
+
 }
