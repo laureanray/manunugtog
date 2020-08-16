@@ -39,7 +39,7 @@ public class MenuToolbar extends MenuBar {
         helpMenu.getItems().add(about);
         viewMenu.getItems().add(windowsSubMenu);
 
-        this.getMenus().addAll(fileMenu, helpMenu, viewMenu);
+        this.getMenus().addAll(fileMenu, libraryMenu, helpMenu, viewMenu);
         this.managedProperty().bind(this.visibleProperty());
     }
 
