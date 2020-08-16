@@ -11,6 +11,7 @@ package tech.laureanray.ui;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationState;
+import tech.laureanray.ui.scenes.SettingsScene;
 import tech.laureanray.ui.strings.UI;
 
 public class WindowManager {

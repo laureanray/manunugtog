@@ -13,7 +13,7 @@ import tech.laureanray.app.ApplicationDataManager;
 import tech.laureanray.models.ApplicationData;
 import tech.laureanray.models.Configuration;
 import tech.laureanray.models.Track;
-import tech.laureanray.ui.panes.library.TracksPane;
+import tech.laureanray.ui.elements.library.TracksPane;
 
 import java.io.IOException;
 import java.nio.file.Files;

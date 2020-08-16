@@ -6,10 +6,12 @@
  * @since 8/13/20
  */
 
-package tech.laureanray.ui;
+package tech.laureanray.ui.scenes;
 
 import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import static tech.laureanray.app.ApplicationProperties.SETTINGS_HEIGHT;
@@ -17,7 +19,7 @@ import static tech.laureanray.app.ApplicationProperties.SETTINGS_WIDTH;
 
 public class SettingsScene extends Scene {
     private static SettingsScene instance;
-    private static HBox parent = new HBox();
+    private static VBox parent = new VBox();
     private SettingsScene() {
         super(parent, SETTINGS_WIDTH, SETTINGS_HEIGHT);
         this.init();
@@ -25,7 +27,12 @@ public class SettingsScene extends Scene {
 
     private void init() {
         Text text = new Text("Settings");
-        parent.getChildren().add(text);
+        TabPane tabPane = new TabPane();
+        Tab generalSettings = new Tab("General");
+        tabPane.getTabs().add(generalSettings);
+
+
+        parent.getChildren().addAll(text, tabPane);
     }
 
     public static SettingsScene getInstance() {

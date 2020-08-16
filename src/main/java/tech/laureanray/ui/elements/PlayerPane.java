@@ -1,4 +1,4 @@
-package tech.laureanray.ui.panes;
+package tech.laureanray.ui.elements;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;

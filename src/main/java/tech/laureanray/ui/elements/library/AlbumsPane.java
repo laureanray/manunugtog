@@ -6,9 +6,8 @@
  * @since 8/13/20
  */
 
-package tech.laureanray.ui.panes.library;
+package tech.laureanray.ui.elements.library;
 
-import javafx.scene.layout.BorderStrokeStyle;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 

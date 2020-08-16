@@ -1,10 +1,11 @@
-package tech.laureanray.ui;
+package tech.laureanray.ui.elements;
 
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import tech.laureanray.ui.panes.library.AlbumsPane;
-import tech.laureanray.ui.panes.library.TracksPane;
+import tech.laureanray.ui.elements.library.AlbumsPane;
+import tech.laureanray.ui.elements.library.TracksPane;
+import tech.laureanray.ui.scenes.MainScene;
 
 public class ViewSwitcher extends HBox  {
     private static ViewSwitcher instance;

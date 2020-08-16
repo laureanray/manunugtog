@@ -10,7 +10,7 @@ package tech.laureanray.utils;
 
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
-import tech.laureanray.ui.MenuToolbar;
+import tech.laureanray.ui.elements.MenuToolbar;
 import tech.laureanray.ui.WindowManager;
 
 public class Keybindings {

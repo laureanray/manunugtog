@@ -1,4 +1,4 @@
-package tech.laureanray.ui;
+package tech.laureanray.ui.elements;
 
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Menu;

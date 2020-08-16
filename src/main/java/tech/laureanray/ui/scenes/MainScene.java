@@ -1,4 +1,4 @@
-package tech.laureanray.ui;
+package tech.laureanray.ui.scenes;
 
 import javafx.scene.Scene;
 import javafx.scene.control.MenuBar;
@@ -7,9 +7,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationProperties;
-import tech.laureanray.ui.panes.PlayerPane;
-import tech.laureanray.ui.panes.TrackDetailsPane;
-import tech.laureanray.utils.Keybindings;
+import tech.laureanray.ui.elements.ViewSwitcher;
+import tech.laureanray.ui.elements.MenuToolbar;
+import tech.laureanray.ui.elements.PlayerPane;
+import tech.laureanray.ui.elements.TrackDetailsPane;
 
 public class MainScene extends Scene {
     private static MainScene instance;

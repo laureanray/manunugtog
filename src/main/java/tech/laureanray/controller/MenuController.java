@@ -6,8 +6,8 @@ import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.models.Configuration;
 import tech.laureanray.threads.LoadMusicThread;
-import tech.laureanray.ui.MainScene;
-import tech.laureanray.ui.panes.library.TracksPane;
+import tech.laureanray.ui.scenes.MainScene;
+import tech.laureanray.ui.elements.library.TracksPane;
 
 import java.io.File;
 

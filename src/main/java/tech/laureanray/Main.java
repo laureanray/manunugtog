@@ -6,8 +6,8 @@ import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.app.ApplicationDataManager;
 import tech.laureanray.app.ApplicationProperties;
 import tech.laureanray.app.ApplicationState;
-import tech.laureanray.ui.MainScene;
-import tech.laureanray.ui.SettingsScene;
+import tech.laureanray.ui.scenes.MainScene;
+import tech.laureanray.ui.scenes.SettingsScene;
 import tech.laureanray.utils.Keybindings;
 
 import java.io.IOException;

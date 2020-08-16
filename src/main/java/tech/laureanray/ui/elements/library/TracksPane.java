@@ -1,4 +1,4 @@
-package tech.laureanray.ui.panes.library;
+package tech.laureanray.ui.elements.library;
 
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Priority;
