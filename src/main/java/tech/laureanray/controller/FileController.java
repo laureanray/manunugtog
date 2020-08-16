@@ -8,9 +8,6 @@ import tech.laureanray.threads.LoadMusicThread;
 import tech.laureanray.ui.MainScene;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class FileController {
     private static FileController instance;
@@ -40,20 +37,16 @@ public class FileController {
         if (!this.config.getTargetDirectories().contains(path.toString())) {
             // FIXME: prevent nested
             this.config.getTargetDirectories().add(path.toString());
-
-            LoadMusicThread loadMusicThread = new LoadMusicThread();
-            loadMusicThread.start();
+            this.loadMusic();
         }
 
         configManager.updateConfiguration();
     }
 
-    public void updateLibrary() throws IOException {
-        for (String path: this.config.getTargetDirectories()) {
-            Files.walk(Paths.get(path))
-                    .filter(Files::isRegularFile)
-                    .forEach(System.out::println);
-        }
+    public void loadMusic()  {
+        LoadMusicThread loadMusicThread = new LoadMusicThread();
+        loadMusicThread.start();
+
     }
 
 }
