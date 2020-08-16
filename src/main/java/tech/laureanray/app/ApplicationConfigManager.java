@@ -10,40 +10,45 @@
 package tech.laureanray.app;
 
 import com.alibaba.fastjson.JSON;
+import tech.laureanray.models.Configuration;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 
 public class ApplicationConfigManager {
     private static ApplicationConfigManager instance;
+    private Configuration loadedConfiguration;
     private ApplicationConfigManager() {
-          /*
-            TODO:
-                1. Create configuration file (os specific) if a config doesnt exists.
-                    Then populate with default values
-         */
+        Configuration defaultConfiguration = new Configuration();
+        String jsonString = JSON.toJSONString(defaultConfiguration);
 
+        File configFile = new File("application-config.json");
+        if (configFile.exists()) {
+            System.out.println("FILE EXISTS");
+            System.out.println(configFile.toString());
+                if (configFile.canRead()) { try {
+                    String content = Files.readString(configFile.getAbsoluteFile().toPath(), StandardCharsets.UTF_8);
+                    Configuration config = JSON.parseObject(content, Configuration.class);
+                } catch (IOException e) {
+                    // handle error here
 
-        List<String> data = new ArrayList<>();
+                }
+            }
+        } else {
+            try {
+                FileWriter myWriter = new FileWriter("application-config.json");
+                myWriter.write(jsonString);
+                myWriter.close();
+                System.out.println("Successfully wrote to the file.");
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
 
-        for (int i = 0; i < 100; i++) {
-            data.add("HAHAHAHAHA" + String.valueOf(i) + "\n");
         }
-
-        String jsonString = JSON.toJSONString(data);
-
-        try {
-            FileWriter myWriter = new FileWriter("application-config.json");
-            myWriter.write(jsonString);
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-
     }
 
     public static ApplicationConfigManager getInstance() {

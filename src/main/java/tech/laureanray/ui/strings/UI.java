@@ -1,6 +1,6 @@
 package tech.laureanray.ui.strings;
 
-public class UIStrings {
+public class UI {
     public static final String ADD_FOLDER = "Add Folder";
     public static final String WINDOWS = "Windows";
     public static final String EXIT = "Exit";
@@ -9,4 +9,5 @@ public class UIStrings {
     public static final String VIEW = "View";
     public static final String ABOUT = "About";
     public static final String NOW_PLAYING = "Now Playing";
+    public static final String ALBUMS = "Albums";
 }

@@ -26,11 +26,11 @@ public class Main extends Application {
         stage.show();
         mainScene.setStage(stage);
         Keybindings.initialize(mainScene);
-
-        Stage settingsStage = new Stage();
-        settingsStage.setTitle("Settings");
-        settingsStage.setScene(settingsScene);
-        settingsStage.show();
+//
+//        Stage settingsStage = new Stage();
+//        settingsStage.setTitle("Settings");
+//        settingsStage.setScene(settingsScene);
+//        settingsStage.show();
 
         stage.setOnCloseRequest(windowEvent -> {
             configManager.updateConfiguration();

@@ -5,7 +5,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import tech.laureanray.controller.FileController;
-import tech.laureanray.ui.strings.UIStrings;
+import tech.laureanray.ui.strings.UI;
 
 public class MenuToolbar extends MenuBar {
     private static MenuToolbar instance;
@@ -16,18 +16,18 @@ public class MenuToolbar extends MenuBar {
     }
 
     private void init() {
-        Menu fileMenu  = new Menu(UIStrings.FILE);
-        Menu helpMenu = new Menu(UIStrings.HELP);
-        Menu viewMenu = new Menu(UIStrings.VIEW);
+        Menu fileMenu  = new Menu(UI.FILE);
+        Menu helpMenu = new Menu(UI.HELP);
+        Menu viewMenu = new Menu(UI.VIEW);
         // Submenus
-        Menu windowsSubMenu = new Menu(UIStrings.WINDOWS);
+        Menu windowsSubMenu = new Menu(UI.WINDOWS);
 
-        MenuItem addFolder = new MenuItem(UIStrings.ADD_FOLDER);
-        MenuItem exit = new MenuItem(UIStrings.EXIT);
-        MenuItem about = new MenuItem(UIStrings.ABOUT);
+        MenuItem addFolder = new MenuItem(UI.ADD_FOLDER);
+        MenuItem exit = new MenuItem(UI.EXIT);
+        MenuItem about = new MenuItem(UI.ABOUT);
 
         // View
-        CheckMenuItem nowPlaying = new CheckMenuItem(UIStrings.NOW_PLAYING);
+        CheckMenuItem nowPlaying = new CheckMenuItem(UI.NOW_PLAYING);
 
         windowsSubMenu.getItems().addAll(nowPlaying);
 
@@ -45,22 +45,22 @@ public class MenuToolbar extends MenuBar {
 
     private void setListeners() {
         this.getMenus().forEach(menu -> {
-            if (menu.getText().equals(UIStrings.FILE)) {
+            if (menu.getText().equals(UI.FILE)) {
                 menu.getItems().forEach(menuItem -> {
                     switch (menuItem.getText()) {
-                        case UIStrings.ADD_FOLDER:
+                        case UI.ADD_FOLDER:
                             menuItem.setOnAction(e -> {
                                 fileController.addFolder();
                             });
                             break;
                     }
                 });
-            } else if (menu.getText().equals(UIStrings.VIEW)) {
+            } else if (menu.getText().equals(UI.VIEW)) {
                 menu.getItems().forEach(menuItem -> {
                     System.out.println(menuItem.getText());
                     ((Menu) menuItem).getItems().forEach(m -> {
                         switch (m.getText()) {
-                            case UIStrings.NOW_PLAYING:
+                            case UI.NOW_PLAYING:
                                 m.setOnAction(e -> {
                                     System.out.println("Now Playing");
                                 });
