@@ -11,4 +11,6 @@ public class UI {
     public static final String NOW_PLAYING = "Now Playing";
     public static final String ALBUMS = "Albums";
     public static final String SETTINGS = "Settings";
+    public static final String LIBRARY = "Library";
+    public static final String REFRESH_LIBRARY = "Refresh Library";
 }

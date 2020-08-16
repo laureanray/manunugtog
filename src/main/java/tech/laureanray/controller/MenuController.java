@@ -1,28 +1,30 @@
 package tech.laureanray.controller;
 
+import javafx.application.Platform;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.models.Configuration;
 import tech.laureanray.threads.LoadMusicThread;
 import tech.laureanray.ui.MainScene;
+import tech.laureanray.ui.panes.library.TracksPane;
 
 import java.io.File;
 
-public class FileController {
-    private static FileController instance;
+public class MenuController {
+    private static MenuController instance;
     private static Stage stage;
     private ApplicationConfigManager configManager;
     private Configuration config;
-    private FileController() {
+    private MenuController() {
         this.configManager = ApplicationConfigManager.getInstance();
         this.config = this.configManager.getConfiguration();
 
     }
 
-    public static FileController getInstance() {
+    public static MenuController getInstance() {
         if (instance == null) {
-            instance = new FileController();
+            instance = new MenuController();
             stage = MainScene.getStage();
         }
 
@@ -48,4 +50,12 @@ public class FileController {
         loadMusicThread.run();
     }
 
+    public void exit() {
+        Platform.exit();
+    }
+
+    public void refreshLibrary() {
+        System.out.println("refreshLibrary()");
+        TracksPane.getInstance().updateTrackList();
+    }
 }
