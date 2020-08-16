@@ -34,7 +34,6 @@ public class ApplicationConfigManager {
                     loadedConfiguration = JSON.parseObject(content, Configuration.class);
                 } catch (IOException e) {
                     // handle error here
-
                 }
             }
         } else {
@@ -57,15 +56,6 @@ public class ApplicationConfigManager {
 
         return instance;
     }
-
-    public void loadConfiguration() {
-        /*
-            TODO:
-                1. Load the configuration file (.json)
-                2. Then load it to the memory (sync with ApplicationState)
-
-         */
-    };
 
     public void updateConfiguration() {
         try {

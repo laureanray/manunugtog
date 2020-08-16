@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApplicationDataManager {
+    /*
+        TODO:
+            1. Implement a system that triggers UI updates when data changes (like loading new files, files being added to library directory)
+
+     */
     private static ApplicationDataManager instance;
     private List<Track> trackList;
 
