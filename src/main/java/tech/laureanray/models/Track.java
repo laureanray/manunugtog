@@ -16,7 +16,7 @@ public class Track {
     private String title;
     private List<String> artists;
     private String album;
-
+    private Byte[] albumArt;
     public String getTitle() {
         return title;
     }

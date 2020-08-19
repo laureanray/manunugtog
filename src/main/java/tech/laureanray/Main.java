@@ -6,6 +6,7 @@ import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.app.ApplicationDataManager;
 import tech.laureanray.app.ApplicationProperties;
 import tech.laureanray.app.ApplicationState;
+import tech.laureanray.threads.LoadMusicThread;
 import tech.laureanray.ui.scenes.MainScene;
 import tech.laureanray.ui.scenes.SettingsScene;
 import tech.laureanray.utils.Keybindings;
@@ -56,6 +57,9 @@ public class Main extends Application {
 
         // Finally show stage
         stage.show();
+
+        var lmt = new LoadMusicThread();
+            lmt.run();
     }
 
     public static void main(String[] args) {
