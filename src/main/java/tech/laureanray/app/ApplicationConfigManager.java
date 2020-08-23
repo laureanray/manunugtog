@@ -30,7 +30,8 @@ public class ApplicationConfigManager {
         if (configFile.exists()) {
             System.out.println("FILE EXISTS");
             System.out.println(configFile.toString());
-                if (configFile.canRead()) { try {
+            if (configFile.canRead()) {
+                try {
                     String content = Files.readString(configFile.getAbsoluteFile().toPath(), StandardCharsets.UTF_8);
                     loadedConfiguration = JSON.parseObject(content, Configuration.class);
                 } catch (IOException e) {

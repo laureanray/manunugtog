@@ -18,9 +18,10 @@ import tech.laureanray.ui.elements.library.TracksPane;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
+import java.util.List ;
 
 public class LoadMusicThread implements Runnable {
+
     private Configuration config;
     private ApplicationDataManager applicationDataManager;
     private ApplicationData applicationData;

@@ -22,10 +22,17 @@ import java.io.IOException;
 
 public class Metadata {
     public static void main(String[] args) throws TagException, ReadOnlyFileException, CannotReadException, InvalidAudioFrameException, IOException {
-        var m = new File("/home/lr/Music/Taylor Swift/Taylor Swift - folklore (deluxe version)/1.mp3");
-        AudioFile f = AudioFileIO.read(m);
+        var mp3Sample = new File("/home/lr/Music/Taylor Swift/Taylor Swift - folklore (deluxe version)/1.mp3");
+        var flacSample = new File("/home/lr/Music/Taylor Swift/Taylor Swift - folklore (deluxe version)/1.mp3");
+        AudioFile f = AudioFileIO.read(mp3Sample);
         Tag tag = f.getTag();
         System.out.println(f.getAudioHeader().getBitRate());
+
+        tag.getFields().forEachRemaining(e -> {
+            System.out.println(e.getId() + ": " + ((ID3v23Frame) e).getContent());
+        });
+
+
         tag.getFields().forEachRemaining(e -> {
             System.out.println(e.getId() + ": " + ((ID3v23Frame) e).getContent());
         });

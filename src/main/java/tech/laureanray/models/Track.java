@@ -17,6 +17,10 @@ public class Track {
     private List<String> artists;
     private String album;
     private Byte[] albumArt;
+    private int durationInSeconds;
+    private String durationReadable;
+    private String format;
+    private int bitrate;
     public String getTitle() {
         return title;
     }
