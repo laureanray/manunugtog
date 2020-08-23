@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
+
     private final MainScene mainScene = MainScene.getInstance();
     private final SettingsScene settingsScene = SettingsScene.getInstance();
     private final ApplicationDataManager appDataManager = ApplicationDataManager.getInstance();

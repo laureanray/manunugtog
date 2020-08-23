@@ -43,7 +43,6 @@ public class ApplicationDataManager {
 
     public void addTrack(Track track) {
         this.trackList.add(track);
-        System.out.println("ADDED: " + track.getTitle());
     }
 
 

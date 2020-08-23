@@ -15,11 +15,14 @@ import tech.laureanray.app.ApplicationProperties;
 public class TrackListItem extends HBox {
     TrackListItem(int id, String title, String artist, String trackLength) {
         super();
-        Text titleText = new Text(title);
-        Text artistText = new Text(artist);
         this.setPrefWidth(ApplicationProperties.APP_WIDTH - 30);
-        Text trackLengthText = new Text(trackLength);
-        this.getChildren().addAll(titleText, artistText, trackLengthText);
+        var titleText = new Text(title);
+        var separator = new Text("-");
+        var artistText = new Text(artist);
+        var trackLengthText = new Text(trackLength);
+            trackLengthText.setStyle("-fx-padding: 0 0 0 25px");
+
+        this.getChildren().addAll(titleText, separator, artistText, trackLengthText);
         this.setId(String.valueOf(id));
         this.setOnMouseClicked(evt -> {
             System.out.println("Clicked: " + this.getId());

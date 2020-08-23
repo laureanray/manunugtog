@@ -30,7 +30,6 @@ public class TracksPane extends VBox {
     }
 
     public void updateTrackList() {
-        System.out.println((char)27 + "[31m" + "updateTrackList()");
 //        vb.setPrefHeight(500); // FIXME: set fixed height
         vb.getChildren().removeAll(); // Remove all
         List<TrackListItem> listItems = new ArrayList<>();
@@ -38,7 +37,7 @@ public class TracksPane extends VBox {
         List<Track> tracks = ApplicationDataManager.getInstance().getTracks();
 
         for (Track track: tracks) {
-            TrackListItem item = new TrackListItem(track.hashCode(), track.getTitle(), "Artist", "3:12");
+            TrackListItem item = new TrackListItem(track.hashCode(), track.getTitle(), track.getArtists().toString(), track.getDurationReadable());
             listItems.add(item);
             vb.getChildren().add(item);
         }
