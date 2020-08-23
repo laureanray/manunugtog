@@ -51,7 +51,9 @@ public class LoadMusicThread implements Runnable {
                             if (ext.equals("flac") || ext.equals("mp3")) { // FIXME: add the checks later for other format
                                 try {
                                     var t = MetadataParser.parse(e.toString());
-                                    this.applicationDataManager.addTrack(t);
+                                    if (t.getTitle() != null) {
+                                        this.applicationDataManager.addTrack(t);
+                                    }
                                 } catch (TagException tagException) {
                                     tagException.printStackTrace();
                                 } catch (ReadOnlyFileException readOnlyFileException) {
