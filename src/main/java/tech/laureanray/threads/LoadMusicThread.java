@@ -47,6 +47,11 @@ public class LoadMusicThread implements Runnable {
                 Files.walk(Paths.get(directory))
                         .filter(Files::isRegularFile)
                         .forEach(e -> {
+                            try {
+                                Thread.sleep(1250);
+                            } catch (InterruptedException interruptedException) {
+                                interruptedException.printStackTrace();
+                            }
                             var ext = FileUtils.getFileExt(e.toString());
                             if (ext.equals("flac") || ext.equals("mp3")) { // FIXME: add the checks later for other format
                                 try {

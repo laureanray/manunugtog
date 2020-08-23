@@ -1,6 +1,7 @@
 package tech.laureanray;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.stage.Stage;
 import tech.laureanray.app.ApplicationConfigManager;
 import tech.laureanray.app.ApplicationDataManager;
@@ -60,7 +61,7 @@ public class Main extends Application {
         stage.show();
 
         var lmt = new LoadMusicThread();
-            lmt.run();
+        Platform.runLater(lmt);
     }
 
     public static void main(String[] args) {
