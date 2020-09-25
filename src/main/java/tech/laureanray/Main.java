@@ -27,13 +27,12 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         /*
             TODO:
-             1. This tart method is doing a lot of things, delegate some of the things to another class or method
+             1. This start method is doing a lot of things, delegate some of the things to another class or method
              2. Also, refactor the stage initialization move it probably to WindowManager
          */
         stage.setTitle(ApplicationProperties.NAME);
         stage.setScene(mainScene);
-
-
+        stage.setResizable(false);
         mainScene.setStage(stage);
 
 
